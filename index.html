@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ziyaan's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Ziyaan's Portfolio</h1>
+    <nav>
+      <button class="tab-link" data-tab="about">About Me</button>
+      <button class="tab-link" data-tab="projects">Projects</button>
+      <button class="tab-link" data-tab="quizzes">Quizzes</button>
+      <button class="tab-link" data-tab="contact">Contact</button>
+    </nav>
+    <div class="theme-switcher">
+      <label for="dark-mode-toggle">Dark Mode</label>
+      <input type="checkbox" id="dark-mode-toggle">
+    </div>
+    <div id="language-selector">
+      <label for="language">Language: </label>
+      <select id="language">
+        <option value="en" selected>EN</option>
+        <option value="fr">FR</option>
+        <option value="es">ES</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <!-- About Me Section -->
+    <section id="about" class="tab active">
+      <div class="content-box">
+        <h2>About Me</h2>
+        <div class="info-box">
+          <p>
+            Hello! My name is <strong>Ziyaan Osman</strong>. I am a recent MSc Bioinformatics graduate with a Merit from the University of Leicester.
+          </p>
+          <p>
+            I have a proven track record of designing analytical pipelines, optimizing systems, and creating user-friendly web applications using tools such as Python, R Studio, and Shiny. My professional interests include developing bioinformatics solutions, machine learning algorithms, and statistical modeling for large datasets.
+          </p>
+        </div>
+        <div class="skills-box">
+          <h3>Skills</h3>
+          <ul>
+            <li>Bioinformatics pipeline development</li>
+            <li>Statistical analysis and data visualization</li>
+            <li>Machine learning and algorithms</li>
+            <li>Interactive web application design (Shiny, R Studio)</li>
+            <li>Big data processing and analysis</li>
+            <li>Project management and collaboration</li>
+          </ul>
+        </div>
+        <div class="skills-box">
+          <h3>Programming Languages</h3>
+          <ul>
+            <li>Python</li>
+            <li>R</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Bash/Shell scripting</li>
+          </ul>
+        </div>
+        <div class="contact-bubble">
+          <h3>Contact Information</h3>
+          <ul class="contact-links">
+            <li>Email: <a href="mailto:ziyaan.osman12@icloud.com">ziyaan.osman12@icloud.com</a></li>
+            <li><a href="ProfessionalCV-1.pdf" download>Download My CV</a></li>
+            <li><a href="https://github.com/ziyaan12" target="_blank">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/ziyaanosman/" target="_blank">LinkedIn Profile</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="tab">
+      <div class="content-box">
+        <h2>Projects</h2>
+        <div class="project-box">
+          <h3>Human Endogenous Retrovirus Analysis (HERVanalysis)</h3>
+          <p>
+            <strong>Overview:</strong> This project investigated the transcription of Human Endogenous Retroviruses (HERVs) in melanoma cells under serum starvation stress.
+          </p>
+          <p>
+            <strong>Technologies:</strong> Python, R (ggplot2, BioMart), Telescope, Bowtie2, Samtools, IGV.
+          </p>
+          <p>
+            <strong>Outcome:</strong> Provided novel insights into stress-induced genomic responses.
+          </p>
+        </div>
+        <div class="project-box">
+          <h3>Steered Research Project (SRP): scRNA-seq Re-Analysis</h3>
+          <p>
+            <strong>Overview:</strong> Re-analyzed single-cell RNA sequencing (scRNA-seq) data from metastatic breast cancer to explore cellular heterogeneity.
+          </p>
+          <p>
+            <strong>Technologies:</strong> R (Shiny, Seurat), Python, STAR, Samtools.
+          </p>
+          <p>
+            <strong>Outcome:</strong> Enhanced understanding of tumor heterogeneity.
+          </p>
+        </div>
+        <div class="project-box">
+          <h3>Portfolio Website</h3>
+          <p>
+            <strong>Overview:</strong> Designed and developed this responsive website to showcase my skills, projects, and expertise.
+          </p>
+          <p>
+            <strong>Technologies:</strong> HTML, CSS, JavaScript.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quizzes Section -->
+    <section id="quizzes" class="tab">
+      <div class="content-box">
+        <h2>Quizzes</h2>
+        <p>Select a topic to test your knowledge:</p>
+        <ul class="quiz-topics">
+          <li><button class="quiz-topic" data-topic="computer-science">Computer Science</button></li>
+          <li><button class="quiz-topic" data-topic="dentistry">Dentistry</button></li>
+          <li><button class="quiz-topic" data-topic="biology">Biology</button></li>
+          <li><button class="quiz-topic" data-topic="medicine">Medicine</button></li>
+          <li><button class="quiz-topic" data-topic="physics">Physics</button></li>
+          <li><button class="quiz-topic" data-topic="maths">Maths</button></li>
+          <li><button class="quiz-topic" data-topic="english">English</button></li>
+        </ul>
+        <div id="quiz-container" class="hidden">
+          <h3 id="quiz-title"></h3>
+          <form id="quiz-form"></form>
+          <button id="submit-quiz" class="hidden">Submit Quiz</button>
+          <div id="quiz-result" class="hidden"></div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="tab">
+      <div class="content-box">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, please fill out the form below, and I'll get back to you as soon as possible.</p>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+        <div id="contact-result" class="hidden"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Ziyaan Osman</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
